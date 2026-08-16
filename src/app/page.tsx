@@ -5,24 +5,23 @@ import React from "react";
 export default function HomePage() {
   return (
     <main className="relative w-screen h-screen bg-[#4a32f9] text-[#fdcdd7] flex items-center justify-center select-none overflow-hidden">
-      {/* Top Header: Aligns both logos strictly to the exact same top baseline */}
-      <header className="absolute top-5 left-5 right-5 sm:top-8 sm:left-8 sm:right-8 md:top-10 md:left-10 md:right-10 lg:top-11 lg:left-11 lg:right-11 z-20 flex justify-between items-start pointer-events-none">
+      {/* Top Header: Responsive alignment and proportional scaling for all screen sizes (phone to desktop) */}
+      <header className="absolute top-4 left-4 right-4 sm:top-7 sm:left-7 sm:right-7 md:top-9 md:left-9 md:right-9 lg:top-11 lg:left-11 lg:right-11 z-20 flex justify-between items-start pointer-events-none">
         {/* Top Left: RVCE Logo */}
         <div className="pointer-events-auto flex items-start">
           <img
             src="/logos/rvce_logo_blush.png"
             alt="RVCE Logo"
-            className="h-12 sm:h-16 md:h-18 lg:h-22 w-auto block transition-opacity duration-300 hover:opacity-90"
+            className="h-10 sm:h-14 md:h-18 lg:h-22 w-auto block object-contain transition-opacity duration-300 hover:opacity-90"
           />
         </div>
 
-        {/* Top Right: Coding Club Logo (Height 120px with matching aspect ratio) */}
+        {/* Top Right: Coding Club Logo (Scales responsively with RVCE on phones, 120px on desktop) */}
         <div className="pointer-events-auto flex items-start">
           <img
             src="/logos/coding_club_logo_blush.png"
             alt="Coding Club RVCE Logo"
-            style={{ height: "120px", width: "auto", display: "block" }}
-            className="w-auto block transition-opacity duration-300 hover:opacity-90"
+            className="h-[55px] sm:h-[75px] md:h-[95px] lg:h-[120px] w-auto block object-contain transition-opacity duration-300 hover:opacity-90"
           />
         </div>
       </header>
